@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/boristsr/docker-ssh-slave/docker-ssh-slave:latest
+FROM boristsr/jenkins-ssh-slave:latest
 LABEL MAINTAINER="Philip Edwards <philip@gdcorner.com>"
 
 # Install some pre-reqs and ruby
