@@ -10,4 +10,6 @@ RUN apt-get update \
 # Intall bundler
 RUN gem install bundler
 
+RUN gem install concurrent-ruby
+
 ENTRYPOINT ["setup-sshd"]
