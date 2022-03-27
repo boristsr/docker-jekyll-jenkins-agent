@@ -15,7 +15,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //Execute build
-                sh 'docker build -t $IMAGE_NAME:$BUILD_NUMBER .'
+                sh 'docker build -t $IMAGE_NAME:$BUILD_NUMBER -t $IMAGE_NAME:latest .'
             }
         }
         stage('Login') {
