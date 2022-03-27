@@ -8,13 +8,14 @@ pipeline {
 
     environment {
 		DOCKERHUB_CREDENTIALS=credentials('dockerhub-accesstoken')
+        IMAGE_NAME='boristsr/jenkins-gh-slave'
 	}
 
     stages {
         stage('Build Image') {
             steps {
                 //Execute build
-                sh 'docker build -t jenkins-gh-slave:latest .'
+                sh 'docker build -t $IMAGE_NAME:$BUILD_NUMBER .'
             }
         }
         stage('Login') {
@@ -24,7 +25,7 @@ pipeline {
 		}
         stage('Push Image') {
             steps {
-                sh 'docker push jenkins-gh-slave:latest'
+                sh 'docker push $IMAGE_NAME:$BUILD_NUMBER'
             }
         }
     }
