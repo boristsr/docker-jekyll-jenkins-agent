@@ -12,6 +12,9 @@ RUN apt-get update \
 # Install bundler
 RUN gem install bundler
 
+# Install em-websocket to speed up builds
+RUN gem install em-websocket
+
 # Install jsonlint
 RUN npm install jsonlint -g
 
