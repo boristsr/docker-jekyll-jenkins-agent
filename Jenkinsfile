@@ -8,7 +8,7 @@ pipeline {
 
     environment {
 		DOCKERHUB_CREDENTIALS=credentials('dockerhub-accesstoken')
-        IMAGE_NAME='boristsr/jenkins-gh-slave'
+        IMAGE_NAME='boristsr/jekyll-jenkins-agent'
 	}
 
     stages {
