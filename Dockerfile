@@ -1,4 +1,4 @@
-FROM boristsr/jenkins-ssh-slave:latest
+FROM ubuntu:22.04
 LABEL MAINTAINER="Philip Edwards <philip@gdcorner.com>"
 
 # Install some pre-reqs and ruby
