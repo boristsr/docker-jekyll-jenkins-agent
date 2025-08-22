@@ -6,7 +6,7 @@ RUN apt-get update \
     && apt-get install --no-install-recommends -y openssh-server \
     && apt-get install -y default-jre \
     && apt-get install -y build-essential \
-    && apt-get install -y git \
+    && apt-get install -y git git-lfs \
     && rm -rf /var/lib/apt/lists/*
 
 # Install some pre-reqs and ruby
